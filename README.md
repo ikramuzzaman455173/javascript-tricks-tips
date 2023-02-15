@@ -20,3 +20,30 @@ readline.question('Who are you?\n', name => {
 });
 ```
 
+### Javascript Common Function Examples:)
+
+> This Function Use For All Id Get In Javascript  😀
+
+```js
+function getElementId(getId) {
+  const elementId = document.getElementById(getId)
+  return elementId
+}
+```
+
+> This Function Use For All Class Get In Javascript  😀
+
+```js
+function getElementClass(getClass) {
+  const elementClass = document.getElementsByClassName(getClass)
+  return elementClass
+}
+```
+> This Functin Any Id Input Value Find For Working Rememeber Allso Use This getElementId () function For Use This Function 😀
+
+```js
+function getInputValue(id,inputValue=0) {
+  const inputField = getElementId(id)
+  return inputField.value=inputValue
+}
+```
