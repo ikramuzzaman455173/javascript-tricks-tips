@@ -25,6 +25,7 @@ readline.question('Who are you?\n', name => {
 > This Function Use For All Id Get In Javascript  😀
 
 ```js
+// This Function Use For All Id Get In Javascript  😀
 function getElementId(getId) {
   const elementId = document.getElementById(getId)
   return elementId
