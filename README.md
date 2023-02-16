@@ -40,12 +40,25 @@ function getElementClass(getClass) {
   return elementClass
 }
 ```
-> This Functin Any Id Input Value Find For Working Rememeber Allso Use This getElementId () function For Use This Function 😀
+
+> Function all text element convert in number
 
 ```js
-// This Function Get All Input Field Html
-function getInputValue(id) {
-  const inputField = getElementId(id)
-  return inputField
+// function all text element convert in number
+function getTextElementValueById(elementId) {
+  let getElement = document.getElementById(elementId)
+  let getElementValue = parseInt(getElement.innerText)
+  return getElement.innerText=getElementValue
+}
+```
+
+> Funtion all elementIdGet & set new value 
+
+
+```js
+// Funtion all elementIdGet & set new value 
+function setTextElementValueById(elementId, value) {
+  let setElement = document.getElementById(elementId);
+  setElement.innerText=value
 }
 ```
