@@ -42,8 +42,9 @@ function getElementClass(getClass) {
 > This Functin Any Id Input Value Find For Working Rememeber Allso Use This getElementId () function For Use This Function 😀
 
 ```js
-function getInputValue(id,inputValue=0) {
+// This Function Get All Input Field Html
+function getInputValue(id) {
   const inputField = getElementId(id)
-  return inputField.value=inputValue
+  return inputField
 }
 ```
