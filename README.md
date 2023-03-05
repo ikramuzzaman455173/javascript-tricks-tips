@@ -62,3 +62,16 @@ function setTextElementValueById(elementId, value) {
   setElement.innerText=value
 }
 ```
+
+### Function Array Value Generate Html ListItem:)
+
+```js
+// function Generate Array List Items
+function operateOnArrayValues(arr) {
+  let item = "";
+  for (let i = 0; i < arr?.length; i++) {
+    item += `<li>${arr[i]}</li>`;
+  }
+  return item;
+}
+```
