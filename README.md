@@ -13,15 +13,14 @@
 - [Javascript Getting User Input in Node.js:)](#js-1)
 - [Javascript Common Function Examples:)](#js-2)
 - [Function Array Value Generate Html ListItem:)](#js-3)
+- [Simple All Important & Usefull Function:)](#js-4)
+
 
 
 
 ***
 
 <a name="js-1"></a>
-
-### [One Of The Best Websit For Bd Javascript Learners:)](https://with.zonayed.me/js)
-
 
 ### Javascript Getting User Input in Node.js:)
 
@@ -42,7 +41,10 @@ readline.question('Who are you?\n', name => {
 ```
 
 ### Javascript Common Function Examples:)
+
 <a name="js-2"></a>
+
+#### [Go to top:arrow_up: ](#top)
 
 > This Function Use For All Id Get In Javascript  😀
 
@@ -98,3 +100,89 @@ function operateOnArrayValues(arr) {
   return item;
 }
 ```
+
+
+<a name="js-4"></a>
+
+#### [Go to top:arrow_up: ](#top)
+
+### Simple Usefull & All Important Functions:)
+
+> Javascript Add Items:)
+
+```js
+// add item
+function addItem() {
+  const lastPickedColor = colorInput.value;
+  const li = document.createElement("li");
+  li.innerHTML = addInput.value;
+  li.style.color = lastPickedColor;
+  changeColor();
+  itemList.appendChild(li);
+
+  addInput.value = "";
+}
+```
+
+> Javascript Remove Items:)
+
+```js
+// remove item
+function removeItem() {
+  let li = document.querySelector("li:last-child");
+  itemList.removeChild(li);
+}
+```
+
+
+> Javascript Change Color:)
+
+```js
+// change color
+function changeColor() {
+  const List = document.querySelectorAll("li");
+  const lastPickedColor = colorInput.value;
+  for (let i = 0; i < List.length; i++) {
+    List[i].style.color = lastPickedColor;
+  }
+}
+```
+
+> Javascript Mouse Over Text UpperCase:)
+
+```js
+// uppercase
+itemList.addEventListener("mouseover", (event) => {
+  if (event.target.tagName == "LI") {
+    event.target.style.textTransform = "uppercase";
+  }
+});
+```
+
+> Javascript Mouse Out Text UpperCase:)
+
+```js
+// lowercase
+itemList.addEventListener("mouseout", (event) => {
+  if (event.target.tagName == "LI") {
+    event.target.style.textTransform = "lowercase";
+  }
+});
+```
+
+> Javascript Text Hide And Show Function:)
+
+```js
+// hide/show list
+function toggleButton() {
+  if (listDiv.style.display == "none") {
+    listDiv.style.display = "block";
+    toggle.textContent = "Hide list";
+  } else {
+    listDiv.style.display = "none";
+    toggle.textContent = "Show list";
+  }
+}
+```
+
+#### [Go to top:arrow_up: ](#top)
