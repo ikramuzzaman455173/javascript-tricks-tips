@@ -87,6 +87,45 @@ function setTextElementValueById(elementId, value) {
 }
 ```
 
+> Function getInputFieldValueById()
+
+```js
+// Function getInputFieldValueById()
+function getInputFieldValueById(inputFieldId) {
+  const inputField = document.getElementById(inputFieldId);
+  const inputFieldValueString = inputField.value;
+  const inputFieldValue = parseFloat(inputFieldValueString);
+  return inputFieldValue;
+}
+```
+
+
+### Function getTextElementValueById()
+
+```js
+// Function getTextElementValueById()
+function getTextElementValueById(elementId) {
+  const textElement = document.getElementById(elementId);
+  const textElementValueString = textElement.innerText;
+  // const textElementValue = textElementValueString;
+  return textElementValueString;
+}
+```
+
+### Function setTextElementValueById()
+
+
+```js
+// Function setTextElementValueById()
+function setTextElementValueById(elementId, newValue) {
+  const textElement = document.getElementById(elementId);
+  textElement.innerText = newValue;
+}
+```
+
+
+
+
 <a name="js-3"></a>
 ### Function Array Value Generate Html ListItem:)
 
