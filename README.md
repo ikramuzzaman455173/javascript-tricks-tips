@@ -99,6 +99,16 @@ function getInputFieldValueById(inputFieldId) {
 }
 ```
 
+> Function Input Field Value Empity()
+
+```js
+// function inputValueEmpity()
+function inputValueEmpity(getId) {
+  let inputField = getElementId(getId)
+  return inputField.value = ''
+}
+```
+
 
 ### Function getTextElementValueById()
 
