@@ -14,6 +14,7 @@
 - [Javascript Common Function Examples:)](#js-2)
 - [Function Array Value Generate Html ListItem:)](#js-3)
 - [Simple All Important & Usefull Function:)](#js-4)
+- [Javascript Local Stoage Use Common Function And Method:)](#js-5)
 
 
 
@@ -232,6 +233,55 @@ function toggleButton() {
     toggle.textContent = "Show list";
   }
 }
+```
+
+#### [Go to top:arrow_up: ](#top)
+
+
+<a name="js-5"></a>
+### Javascript Local Stoage Use Common Function And Method:)
+
+> Product Found Or Not Found Local Storage This Function Chack:)
+
+```js
+// Product Found Or Not Found Local Storage This Function Chack
+const shoppingCart = () => {
+  let cart = {}
+  const storeCart = localStorage.getItem('cart')
+  if (storeCart) {
+    cart = JSON.parse(storeCart)
+  }
+  return cart
+}
+```
+
+
+> Save Product To LocalStorage Use This Function:)
+
+```js
+const saveProductToLocalStroage = (product, quantity) => {
+  const cart = shoppingCart()
+  cart[product] = quantity
+  const stringyFi = JSON.stringify(cart)
+  // console.log(stringyFi)
+  localStorage.setItem('cart', stringyFi)
+}
+```
+
+> Display  Product From LocalStorage Use This Function:)
+
+```js
+const displayProductFromLocalStroage = () => {
+  const saveCart = shoppingCart()
+  // console.log(saveCart)
+  for (const product in saveCart) {
+    console.log(product)
+    const quantity = saveCart[product]
+    console.log(`${quantity}=${saveCart[product]}`)
+    displayProduct(product,quantity)
+  }
+}
+displayProductFromLocalStroage()
 ```
 
 #### [Go to top:arrow_up: ](#top)
