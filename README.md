@@ -15,6 +15,7 @@
 - [Function Array Value Generate Html ListItem:)](#js-3)
 - [Simple All Important & Usefull Function:)](#js-4)
 - [Javascript Local Stoage Use Common Function And Method:)](#js-5)
+- [Javascript Simple Basics CRUD Operations:)](#js-6)
 
 
 
@@ -283,5 +284,190 @@ const displayProductFromLocalStroage = () => {
 }
 displayProductFromLocalStroage()
 ```
+
+#### [Go to top:arrow_up: ](#top)
+
+<a name="js-6"></a>
+### Javascript Simple Basics CRUD Operations:)
+
+#### Structure Chart How To Work CRUD Operations:)
+
+![vlsw0253j7st1ictip03](https://user-images.githubusercontent.com/106922916/224463067-51650cf8-71cd-4a7b-94e2-06332e02fdca.png)
+
+#### Basics CRUD Operations Html Code:)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Basics</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <h1>Social Media App</h1>
+  <div class="container">
+    <div class="left">
+      <form id="form">
+        <label for="">Write your post here</label>
+        <br><br>
+        <textarea name="" id="input" cols="30" rows="10"></textarea>
+        <br><br>
+        <div id="msg"></div>
+        <button type="submit">Post</button>
+      </form>
+    </div>
+    <div class="right">
+      <h3>Your posts here</h3>
+      <div id="posts">
+        <div>
+          <p>Post 1</p>
+          <span class="options">
+            <i onClick="editPost(this)" class="fas fa-edit"></i>
+            <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+          </span>
+        </div>
+        <div>
+          <p>Post 2</p>
+          <span class="options">
+            <i onClick="editPost(this)" class="fas fa-edit"></i>
+            <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- <script src="main.js"></script> -->
+<script src="script.js"></script>
+
+</html>
+```
+
+#### Basics CRUD Operations Css Code:)
+
+```css
+*{
+  text-transform: capitalize;
+}
+body {
+  font-family: sans-serif;
+  margin: 0 50px;
+}
+button{
+  width:100px;
+  height:50px;
+  font-size:1.2rem;
+  font-weight:bold;
+  background:yellow;
+  cursor: pointer;
+}
+button:focus{
+  background:tomato;
+  color:#fff;
+}
+button:active{
+  background:green;
+  color:#fff;
+}
+.container {
+  display: flex;
+  gap: 50px;
+}
+
+#posts {
+  width: 400px;
+}
+
+#posts div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  gap: 25px;
+}
+
+i {
+  cursor: pointer;
+}
+
+#msg {
+  color: red;
+  margin-bottom:1rem;
+  font-weight:bold;
+}
+
+textarea{
+  font-size:1.5rem;
+  font-weight:bold;
+  color:#333;
+}
+```
+
+#### Basics CRUD Operations Important Javascript Code:)
+
+```js
+const form = document.getElementById("form");
+const input = document.getElementById("input");
+const msg = document.getElementById("msg");
+const posts = document.getElementById("posts");
+
+// create function Click Button to formSubmit
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+  if (input.value === '') {
+    msg.innerHTML="Input Field Can Not Be Blank!"
+  } else {
+    acceptData()
+  input.focus();
+  }
+})
+
+// Global Store Data
+let data = {}
+
+// Function Accept The Data
+const acceptData = () => {
+  data["text"] = input.value
+  posts.innerHTML += `
+    <div>
+          <p>${data.text}</p>
+          <span class="options">
+            <i onClick="editPost(this)" class="fas fa-edit"></i>
+            <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+          </span>
+        </div>
+    `;
+  input.value=''
+}
+
+// Funtion Delete The Post()
+const deletePost = (e) => {
+  e.parentElement.parentElement.remove()
+  return
+}
+
+// Function Edit The Post()
+const editPost = (e) => {
+  input.value = e.parentElement.previousElementSibling.innerText;
+  input.autofocus = e.parentElement.previousElementSibling.innerText;
+  input.focus()
+  e.parentElement.parentElement.remove()
+  return
+}
+```
+
+#### Demo Image:)
+
+![screenshot-rocks](https://user-images.githubusercontent.com/106922916/224462921-ac021aa4-ee40-49c2-931e-9f281bd791ec.png)
+
 
 #### [Go to top:arrow_up: ](#top)
