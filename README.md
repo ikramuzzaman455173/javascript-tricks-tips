@@ -16,6 +16,7 @@
 - [Simple All Important & Usefull Function:)](#js-4)
 - [Javascript Local Stoage Use Common Function And Method:)](#js-5)
 - [Javascript Simple Basics CRUD Operations:)](#js-6)
+- [Javascript Find Value Nested Array Of Objects:)](#js-7)
 
 
 
@@ -471,3 +472,30 @@ const editPost = (e) => {
 
 
 #### [Go to top:arrow_up: ](#top)
+
+<a name="js-7"></a>
+
+### Javascript Find Value Nested Array Of Objects:
+
+> Code Demo Image:)
+
+
+![array-of-object_](https://user-images.githubusercontent.com/106922916/228205458-69d71f1f-bb83-48ee-b98b-c50d0fd3514e.PNG)
+
+> Clead Code Image:)
+
+![nested-object-value-find](https://user-images.githubusercontent.com/106922916/228205542-baf5bf0f-d28e-40bd-a4da-f92f9413f959.png)
+
+#### Nested Object Value Find Code:)
+
+```js
+
+  let feature = Object.values(features || '')
+  feature.map((item,index)=><p className="font-semibold" key={index}>{index+1}. {item.feature_name}</p>)
+  
+```
+
+#### [Go to top:arrow_up: ](#top)
+
+<a name=""></a>
+
